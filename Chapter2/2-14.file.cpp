@@ -1,4 +1,4 @@
-//2-14. file.cpp
+//2-14. file.cpp: 실습예제 2.14
 #include <stdio.h>
 #include <stdlib.h>
 

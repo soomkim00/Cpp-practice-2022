@@ -15,6 +15,6 @@ void main() {
 void fcn() {
     static int counter = 0;//static º¯¼ö
     counter++;
-	printf("fcn::counter = %d\n", counter);
+	printf("fcn::counter = %d\n\n", counter);
 	total += counter;
 }
