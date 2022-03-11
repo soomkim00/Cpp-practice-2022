@@ -1,4 +1,4 @@
-//2-12. char2.cpp
+//2-12. char2.cpp: 실습예제 2.12
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
@@ -27,8 +27,8 @@ int main(void){
     printf("r = %s\n", r);
 	// i,j, *p 모두 문자열 상수를 가리키고 있으므로 변경 불가
     //strcpy(j, i);
-	strcpy(i, *p);
-	//strcpy(i, s);
+	//strcpy(i, *p);
+	strcpy(s, r);
 	//strcpy(*p, i);
 	//strcpy(*p, *q);
 	//strcpy(*p, s);

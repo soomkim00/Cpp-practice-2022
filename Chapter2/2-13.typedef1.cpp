@@ -13,7 +13,7 @@ typedef struct {
 SAMPLE merge(const SAMPLE val[], int n);
 //SAMPLE merge(SAMPLE val[], int n);//runtime 오류 발생-function signature가 다르다
 int main(void) {
-	SAMPLE nodes[3] = { {20, 10, 7.7}, {1,2,3.3}, {4,5,6.6} };
+	SAMPLE nodes[3] = { {20, 10, 6.6}, {3,2,3.3}, {4,4,6.6} };
 	SAMPLE mid;
 	mid = merge(nodes, 3);
 	//주석 1

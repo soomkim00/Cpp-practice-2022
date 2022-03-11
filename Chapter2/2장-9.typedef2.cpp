@@ -14,10 +14,11 @@ void main(void){
 	SAMPLE first = {1,1,1.123};
 	SAMPLE second = {2,2,2.234};
     mid = merge(&first, &second);
+	printf("\nAfter call mid=merge()\n");
 	printf("mid 값 출력\n");
 	printf("mid x값 출력 : %d\n", mid->x);//wrong value 출력
 	printf("mid y값 출력 : %d\n", mid->y);//wrong value 출력
-	printf("mid value값 출력 : %f\n", mid->value);//wrong value 출력
+	printf("mid value값 출력 : %f\n\n", mid->value);//wrong value 출력
 	system("pause");
 }
 

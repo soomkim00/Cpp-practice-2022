@@ -23,7 +23,9 @@ int main(void)
     char *ptr;
     char w[10];
     ptr = w;
+    printf("\n w[10] = string ÀÔ·Â°ª::");
     scanf("%s", ptr);
+    printf("*ptr = %s\n", ptr);
 	system("pause");
     return 0;
 }

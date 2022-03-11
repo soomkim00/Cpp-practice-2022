@@ -39,6 +39,8 @@ void main()
 	//*
 	printf("\n------ 이중 pointer: test = &p -------\n");
 	int **test;
+	//int** t;
+	//t = A;
 	//*test = *A;//variable 'test'가 초기화없이 사용할 수 없다
 	test = &p;//test[][]처럼 사용하기 위한 초기화 방법
 	printf("A: %p, p: %p, *test : %p\n", A, p, *test);

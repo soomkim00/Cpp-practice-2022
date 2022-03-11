@@ -1,4 +1,4 @@
-//2-10. array_pointer.cpp - function pointer를 array로 선언
+//2-10. array_pointer.cpp - function pointer를 array로 선언: 실습예제 2.10
 #include <stdio.h>
 #include <stdlib.h>
 //두 정수의 합을 구하는 함수
