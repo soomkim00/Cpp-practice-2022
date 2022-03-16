@@ -12,13 +12,13 @@ void main () {
 	printf("total = %d\n", total);
 	system("pause");
 }
-int sum(int ar[][COLS], int rows)
-//int sum(int (*ar)[COLS], int rows)
+//int sum(int ar[][COLS], int rows)
+int sum(int (*ar)[COLS], int rows)
 {
 	int r, c;
 	int total = 0;
-	/*
-	for (r = 0; r <rows; r++)
+	
+	/*for (r = 0; r <rows; r++)
 		for (c = 0; c <COLS; c++)
 			total += ar[r][c];
 	*/
@@ -26,5 +26,6 @@ int sum(int ar[][COLS], int rows)
 	for (r = rows; r > 0; r--, ar++)
 		for (c = 0; c < COLS; c++)
 			total += (*ar)[c];
+	
 	return total;
 }
