@@ -1,2 +1,4 @@
-﻿  oneDimensionMatrix.cpp
+﻿  assignment #3.cpp
+C:\Users\gkgkg\GitHub\Cpp-practice-2022\Chapter4\assignment #3.cpp(108): warning C4700: 초기화되지 않은 'c' 지역 변수를 사용했습니다.
+C:\Users\gkgkg\GitHub\Cpp-practice-2022\Chapter4\assignment #3.cpp(115): warning C4700: 초기화되지 않은 'c' 지역 변수를 사용했습니다.
   Cpp_Chapter4.vcxproj -> C:\Users\gkgkg\GitHub\Cpp-practice-2022\Chapter4\x64\Debug\Cpp_Chapter4.exe

@@ -54,6 +54,7 @@ void displayArray(int(*a)[ROWS][COLS], int tiers)
 		for (int i = 0; i < ROWS; i++)
 			for (int j = 0; j < COLS; j++)
 				cout << "\t" << (*a)[i][j];
+		a++;
 	}
 	cout << endl;
 }
