@@ -12,6 +12,7 @@ public:
 	int Perimeter ();
 	int Area();
 	int operator==(const Rectangle& s);
+	//os<<r;은 operator<<(os, r)을 호출하는 것과 같다 
 	friend ostream& operator<< (ostream& os, Rectangle& r);
 private:
 	int x_pos, y_pos, height, base;

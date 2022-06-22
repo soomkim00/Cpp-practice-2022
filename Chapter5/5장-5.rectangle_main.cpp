@@ -3,6 +3,9 @@
 #include <iostream>
 #include "5장-5-2.Rectangle.h"
 using namespace std;
+//main에서는 iostream, std, xxx.h 포함
+//실습 내용: Rectangle.h 변경없으면 main 변경없다
+//실습 내용: Rectangle.cpp 변경되어도 main 변경없다
 void main(){
     Rectangle a(2,3,5,6), b(2,3,5,5);
     Rectangle *c = &b;	

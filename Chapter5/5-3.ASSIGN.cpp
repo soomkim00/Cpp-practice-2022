@@ -2,14 +2,23 @@
 #include<iostream>
 #include<string>
 using namespace std;
-
+/*
+ 1) 내용
+  객체의 member 변수를 변경하는 방법들을 비교를 통해 알아보는 것이다.
+ 2) 방법
+  가. 1번 주석을 통해 여러가지 생성자들에 대해 이해하자.
+  나. 2번 주석을 통해서 compiler가 제공하는 = 연산을 사용하였을 경우 member변수 값 변화를 보자.
+  다. 3번 주석을 통해서 재정의한 '=' 연산자를 이용하였을 때 member변수 값 변화를 보자.
+*/
 class String{
 public:
-    String ();
-    String (const String&);
-    String & operator = (const String &); 
-     String (char* );
-    ~String (); 
+    String (); //default 생성자
+    String (const String&); //복사 생성자
+    String & operator = (const String &); //assignment
+     String (char* ); //생성자 overloading
+    ~String ();  //소멸자 
+//    char* getString() { return string; }
+private:
     char * string;
 };	
 
@@ -30,14 +39,14 @@ String::String(const String& str){
     strcpy_s(string,strlen(str.string)+1, str.string);
 }
 //주석 3번
-//*
+/* compiler가 제공하는 assignment 연산자 사용시 문제가 무엇인지를 파악하는 것이 필요
 String & String:: operator = (const String & str){
     cout<<"[재정의한 assign 함수호출]"<<endl;
     string = new char[strlen(str.string)+1];
     strcpy_s(string, strlen(str.string)+1,str.string);
     return *this;
 }
-//*/
+*/
 String::~String(){ 
     cout<<"[소멸자 호출]"<<endl;
     delete []string;
@@ -47,7 +56,7 @@ void main(){
     //1번 주석 
     //*
     String s1;
-    cout << "\ts1의string은" << s1.string << "이다." <<endl;
+    cout << "\ts1의string은" << s1.getString() << "이다." <<endl;
 
     String s2("Programming");
     cout << " s2의 string은 " << &s2.string << "이다." <<endl<<endl;

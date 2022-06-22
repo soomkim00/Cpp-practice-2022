@@ -6,12 +6,15 @@ Date :: Date (int m, int d, int y) :
     month (m),day (d),year (y){
     }
 
-Date :: Date (){
+Date :: Date (){   
+    // compiler는 미 정의된 내부 데이터 member에 0을 치환
+    // 그래서 다음과 초기 값을 사전 설정하는 것이 필요
     month = 1;
     day = 1;
     year = 1900;
 }
-
+// "이상급증현상(oddball day)" 생성자 
+// 현재 날짜 d 이후 nn 일이 경과한 후에 기상이변 등이 발생한 날짜를 생성
 Date :: Date (class Date d, int nn){
     month = d.Month ();
     day = d.Day ();
@@ -26,7 +29,7 @@ int Date :: Month (){
 int Date :: Day (){
     return day;
 }
-int Date :: Year (){
+inline int Date :: Year (){
     return year;
 }
 int Date :: LeapYear (){
@@ -39,7 +42,7 @@ int Date :: LeapYear (){
 int Date :: DaysInMonth (){
     switch (month) {
         case 2:
-            if ( LeapYear () ) return 29;
+            if ( LeapYear () ) return 29; //LeapYear()는 receiver 객체에 대하여 적용
             else return 28;
         case 4:
         case 6:

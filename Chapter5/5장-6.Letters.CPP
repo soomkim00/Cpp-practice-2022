@@ -2,7 +2,7 @@
 #include <iostream>
 #include "5장-6-1.Letters.h"
 using namespace std;
-
+// class 데이터 member와 소멸자를 가진 class의 예
 Letters::Letters(char c) : ch(c) {
 	num++; //class varible 사용
 	cout << "New letter " << c
